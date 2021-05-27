@@ -35,3 +35,9 @@ define_keymap(re.compile('(Code|Gnome-terminal)'), {
 define_keymap(re.compile('(Gnome-terminal)'), {
     K('C-s'): pass_through_key,
 }, "'C-s' pass throush")
+
+# [;][:]入れ替え
+define_keymap(None, {
+    K('Shift-SEMICOLON'): Key.SEMICOLON,
+    K('SEMICOLON'): K('Shift-SEMICOLON'),
+}, "Swap colon and semicolon")
